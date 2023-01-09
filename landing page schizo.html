@@ -1,0 +1,292 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project HeartCode - Schizophrenia</title>
+        <link rel="icon" type="image/x-icon" href="https://thumbs.gfycat.com/FoolhardyBigGrackle-max-1mb.gif" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<style>
+  body {
+    background-color: black;
+  }
+  h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight:900;
+    z-index: 1;
+  }
+
+  p {
+    font-family:'Raleway', sans-serif;
+    font-size:small;
+    z-index: 1;
+    color:#fff;
+  }
+  ::selection {
+    background-color: #43af99;
+  }
+  .container {
+    color: white;
+    background-color: transparent;
+  }
+  /* wordart */
+  .hover-cut {
+    top:200px;
+  color: white;
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+  transform: skewX(0deg) translateX(0px);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hover-cut:hover {
+  transform: skewX(-15deg) translateX(18px);
+  color:#43af99;
+}
+.hover-cut::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 0%;
+  background: #000;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1;
+  transform: rotate(5deg);
+}
+.hover-cut:hover::before {
+top: 50px;
+  width: 110%;
+  left: -5%;
+}
+.hover-cut::after {
+  content: attr(data-text);
+  position: absolute;
+  left: -5%;
+  top: -1px;
+  height: 50%;
+  overflow: hidden;
+  transform: skewX(0deg);
+  background: black;
+  width: 110%;
+  transition: 0.3s;
+  color: white;
+}
+.hover-cut:hover::after {
+  transform: skewX(25deg) translateX(-15px);
+  color:turquoise;
+}
+/* navbar */
+.navbar {
+    font-family: "Raleway";
+    font-weight: lighter;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* typewriter */
+.section {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.js-type-writer {
+  color: white; 
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.js-type-writer > span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+/* card */
+.card {
+    float:left;
+    margin: 10px;
+    height:28rem;
+    background-color:#8b0875;
+    color:white;
+    padding-bottom: 5rem;
+}
+.card-dos {
+    background-color: #43af99;
+}
+/* carousel treatment */
+.carousel-caption{
+  color:#fff;
+  margin:10rem;
+}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black flex-row">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold mx-3" href="landing page schizo.html">education</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav position-absolute end-0 mx-4">
+               <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  helplines
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://ccs.org.sg/nch/">national care hotline</a></li>
+                  <li><a class="dropdown-item" href="https://www.imh.com.sg/Pages/Contact-Us.aspx">institute of mental health</a></li>
+                  <li><a class="dropdown-item" href="https://www.sos.org.sg/contact-us">samaritans of singapore</a></li>
+                </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="Story of recovery" href="try.html">story of recovery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">faq</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+    </nav>
+      <div id=jumbo class="jumbotron jumbotron-fluid mx-auto" style="background-image: url(/Documents/Project\ Heartcode/david.png);background-size: cover;padding:250px;">
+        <h1 class="display-1 fw-bold text-center hover-cut" data-text="SCHIZOPHRENIA">SCHIZOPHRENIA</h1>
+    </div>
+    <div class="section position-relative vstack gap-1">
+        <h1 class="js-type-writer">What is it?</h1>
+        <p>
+        Schizophrenia is a chronic mental disorder<br> 
+        affecting more than 21 million people worldwide.<br> 
+        Patients suffer a <span style="color:turquoise;">distortion of reality</span>.<br>
+        Often hearing voices & experiencing hallucinations <br>
+        </p>
+    </div> 
+    <br>
+    <section>
+        <h1 class="my-4 ms-5 text-light">Signs of Schizophrenia</h1>
+    <div class="row hstack gap-3" style="padding-left: 150px;padding-bottom:30px;">
+        <ul>
+            <li class="col card" data-aos="fade-right" data-aos-delay="100" style="width:19rem;">
+                    <img src="/Documents/Project Heartcode/hallucinate ghost.jpg" class="card-img-top" alt="ghost">
+                    <div class="card-body">
+                      <h1 class="card-text">Hallucinations</h1>
+                      <p class="card-text">Victims may see or hear things that don't exist</p>
+                    </div>
+            </li>
+            <li class="col card-dos card" data-aos="fade-right" data-aos-delay="250" style="width:19rem;">
+                    <img src="/Documents/Project Heartcode/disorganized speech.jpg" class="card-img-top" alt=".erratic behaviour">
+                    <div class="card-body">
+                      <h1 class="card-text ">Erratic speech</h1>
+                      <p class="card-text">Victims may speak in a disorganised and unintelligible manner.</p>
+                    </div>
+            </li>
+            <li class="col card" data-aos="fade-right" data-aos-delay="400" style="width:19rem;">
+                    <img src="/Documents/Project Heartcode/depression and anxiety.png" class="card-img-top" alt="depression">
+                    <div class="card-body">
+                      <h1 class="card-text">Depression</h1>
+                      <p class="card-text">Increased vulnerability to depression and anxiety.</p>
+                    </div>
+            </li>
+        </ul>
+    </div>
+    </section>
+            <header class="section vstack gap-1" style="color:#fff;background-color:black;">
+              <h1>Treatment</h1>
+              <p style="color:#fff;">While there is no true treatment, the best way forward is to reduce schizophrenic symptoms</p>
+            </header>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img src="/Documents/Project Heartcode/antipsychotic_revised.gif" class="d-block w-100 h-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block align-middle">
+                  <h1>Antipsychotic medication</h1>
+                  <p>Antipsychotic medications are the <span style="color:turquoise;">most effective treatment</span> for schizophrenia.<br> 
+                    Medications such as Risperdal and Zyprexa have been shown to reduce both the<br>
+                    positive and negative symptoms of schizophrenia by up to 40%. 
+                </div>
+              </div>
+              <div class="carousel-item " data-bs-interval="2000">
+                <img src="/Documents/Project Heartcode/cognitive_revised.gif" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-none d-md-block align-middle">
+                  <h1>Psychosocial Therapy</h1>
+                  <p>This includes cognitive behavioural therapy, behavioural skills training, <br>
+                     <span style="color:turquoise;">supported employment</span>, and cognitive remediation interventions.</p>
+                </div>
+              </div>
+              <div class="carousel-item " data-bs-interval="2000">
+                <img src="/Documents/Project Heartcode/family_revised.gif" class="d-block w-100 h-100" alt="...">
+                <div class="carousel-caption d-none d-md-block align-middle">
+                  <h1>Family education and support</h1>
+                  <p>Learn <span style="color:turquiose;">coping mechanisms</span> to better manage their distress, as well as to remain <br>
+                     empathetic and prepared as possible, allowing them the capacity to aid their <br>
+                     family/friend suffering from schizophrenia</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+  <footer class="bg-black py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+          <div class="col-auto"><div class="small m-0 text-white">Copyright © Schizophrenia HeartCode 2022</div></div>
+        </div>
+    </div>
+  </footer>
+<script>
+// typewriter
+ const typeWriter = selector => {
+  const el = document.querySelector(selector)
+  const text = el.innerHTML
+
+  ;(function _type(i = 0) {
+    if (i === text.length) return
+
+    el.innerHTML =
+      text.substring(0, i + 1) + '<span aria-hidden="true"></span>'
+    setTimeout(() => _type(i + 1), 100)
+  })()
+}
+typeWriter(".js-type-writer")
+// symptom
+AOS.init({
+  duration: 1000
+});
+
+</script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

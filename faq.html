@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Project HeartCode - faq</title>
+<link rel="icon" type="image/x-icon" href="https://thumbs.gfycat.com/FoolhardyBigGrackle-max-1mb.gif" />
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+  ::selection {
+    background-color: #43af99;
+  }
+  .navbar {
+    font-family:"Raleway";
+    font-weight: lighter;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-size:16px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;  
+  }
+
+.navbar-brand {
+  font-size:20px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+/* Flip Cards CSS */
+.card-container {
+  display: grid;
+  perspective: 700px;
+}
+
+.card-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+  
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border:transparent!important;
+}
+
+/* .front {
+  grid-area: frontAndBack;
+} */
+
+.back {
+  /* grid-area: frontAndBack; */
+  transform: rotateY(-180deg);
+}
+
+input[type='checkbox']:checked + .cardnotb .card-flip {
+  transform: rotateY(180deg);
+}
+/* hover anim */
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:white
+}
+
+html {
+  height: 100%;
+  font-size: 14px;
+}
+
+body{
+  height: 100%;
+}
+
+a{text-decoration: #43af99;color: #43af99;}
+a:hover{color:turquoise;}
+
+.hero-section{
+  /* align-items: flex-start; */
+  /* background-image: url(/Documents/Project\ Heartcode/sunsetlamp.jpg); */
+  background-image: url(/Documents/Project\ Heartcode/david.png);
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: 100%;
+  /* justify-content: center; */  
+  padding: var(--spacing-xxl) var(--spacing-l);
+  margin:auto;
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.cardnotb{
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.cardnotb:before{
+  content: '';
+  display: block;
+  padding-bottom: 0%;
+  width: 100%;
+  }
+
+.card__background{
+  border-radius:25px;
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-color:transparent;
+}
+
+.cardnotb:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .cardnotb:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+  background-color:black;
+  border-radius:25px;
+  height:30rem;
+  width:20rem;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: white;
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+.card__heading2 {
+  color: var(--text-lighter);
+  font-size: 1.4rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black flex-row">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold mx-3" href="landing page schizo.html">education</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav position-absolute end-0 mx-4">
+               <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  helplines
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://ccs.org.sg/nch/">national care hotline</a></li>
+                  <li><a class="dropdown-item" href="https://www.imh.com.sg/Pages/Contact-Us.aspx">institute of mental health</a></li>
+                  <li><a class="dropdown-item" href="https://www.sos.org.sg/contact-us">samaritans of singapore</a></li>
+                </ul>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="Story of recovery" href="try.html">story of recovery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq.html">faq</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+<div class="hero-section vstack gap-5">
+    <h1 class="text-center">Frequently Asked Questions</h1>
+    <div class="card-grid">
+                <!-- Card 1 -->
+        <input type="checkbox" id="card-1"/>
+        <label class="cardnotb" for="card-1">
+            <div class="card-flip">
+            <!-- Card 1 Front -->
+            <div class="card front card__background " >
+                <div class="card__content" style="background-image: url(https://media.istockphoto.com/id/1388349630/photo/tractor-preparing-the-soil-for-planting-crops.jpg?s=170667a&w=0&k=20&c=4FuAsjhRlZl0tVWhewXcWRqA5gpp9qOcmqEr4WAKJgY=);background-position:center;background-size: cover;">
+                <p class="card__category">Question</p>
+                <h3 class="card__heading">Can we cure schizophrenia?</h3>
+                </div>
+            </div>
+            <!-- End Card 1 Front -->
+    
+            <!-- Card 1 Back -->
+            <div class="card back ">
+                <div class="card__content">
+                    <p class="card__category">Answer</p>
+                    <h3 class="card__heading2">Medically speaking, no. However, many treatments exist to subdue symptoms. Read <a href="https://www.nhs.uk/mental-health/conditions/schizophrenia/treatment/">here</a> for more info.</h3>
+                </div>
+            </div>
+            <!-- End Card 1 Back -->
+            </div>
+        </label>
+        <!-- End Card 1 -->
+    
+        <!-- Card 2 -->
+        <input type="checkbox" id="card-2"/>
+        <label class=" cardnotb" for='card-2'>
+            <div class="card-flip">
+            <!-- Card 2 Front -->
+            <div class="card front card__background" >
+                <div class="card__content" style="background-image: url(/Documents/Project\ Heartcode/lowes-takes-photos-MN85r_-95vU-unsplash.jpg);background-position:center;background-size: cover;">
+                    <p class="card__category">Question</p>
+                    <h3 class="card__heading">Can we prevent Schizophrenia?</h3>
+                </div>
+            </div>
+            <!-- End Card 2 Front -->
+    
+            <!-- Card 2 Back -->
+            <div class="card back">
+                <div class="card__content">
+                    <p class="card__category">Answer</p>
+                    <h3 class="card__heading2">Yes! You should maintain deep friendships and manage stress and anxiety. You should also strive to avoid abusing drugs, drinking alcohol and isolating yourself from others. You should get early screenings at your local clinic if you are concerned. Look <a href="https://www.webmd.com/schizophrenia/features/is-it-possible-to-prevent-schizophrenia">here</a> for more info</h3>
+                </div>
+            </div>
+            <!-- End Card 2 Back -->
+            </div>
+        </label>
+        <!-- End Card 2 -->
+    
+        <!-- Card 3 -->
+        <input type="checkbox" id="card-3"/>
+        <label class="cardnotb" for='card-3'>   
+            <div class="card-flip">
+            <!-- Card 3 Front -->
+            <div class="card front card__background" >
+                <div class="card__content" style="background-image: url(/Documents/Project\ Heartcode/half.jpg);background-position:center;background-size: cover;">
+                <p class="card__category">Question</p>
+                <h3 class="card__heading">Are schizophrenic patients violent?</h3>
+                </div>
+            </div>
+            <!-- End Card 3 Front -->
+    
+            <!-- Card 3 Back -->
+            <div class="card back ">
+                <div class="card__content">
+                    <p class="card__category">Answer</p>
+                    <h3 class="card__heading2">Most people with schizophrenia are not violent. Overall, people with schizophrenia are more likely than those without the illness to be harmed by others.</h3>
+                </div>
+            </div>
+            <!-- End Card 3 Back -->
+            </div>
+        </label>
+        <!-- End Card 3 -->
+    
+        <!-- Card 4 -->
+        <input type="checkbox" id="card-4"/>
+        <label class="cardnotb" for='card-4'>
+            <div class="card-flip">
+            <!-- Card 4 Front -->
+            <div class="card front card__background" >
+                <div class="card__content" style="background-image: url(/Documents/Project\ Heartcode/rainbow.jpg);background-position:center;background-size: cover;">
+                <p class="card__category">Question</p>
+                <h3 class="card__heading">What causes schizophrenia?</h3>
+                </div>
+            </div>
+            <!-- End Card 4 Front -->
+    
+            <!-- Card 4 Back -->
+            <div class="card back">
+                <div class="card__content">
+                    <p class="card__category">Answer</p>
+                    <h3 class="card__heading2">Studies suggest that many different genes may increase a person's chances of developing schizophrenia, but that no single gene causes the disorder by itself. The genetic origins of schizophrenia remains a theory.</h3>
+                </div>
+            </div>
+            <!-- End Card 4 Back -->
+            </div>  
+        </label>
+        <!-- End Card 4 -->
+    </div>
+  </div>
+  <footer class="bg-black py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+          <div class="col-auto"><div class="small m-0 text-white">Copyright © Schizophrenia HeartCode 2022</div></div>
+        </div>
+    </div>
+  </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>

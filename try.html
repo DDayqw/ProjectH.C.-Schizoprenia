@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Project HeartCode - story of recovery</title>
+        <link rel="icon" type="image/x-icon" href="https://thumbs.gfycat.com/FoolhardyBigGrackle-max-1mb.gif" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+          body {
+    /* font: 120% / 1.5 Arial; */
+    overflow-y: hidden; 
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1{
+    font-family: 'Raleway', sans-serif;
+    font-weight:900;
+    z-index: 1;
+  }
+
+  p {
+    font-family:'Raleway', sans-serif;
+    font-size:small;
+    z-index: 1;
+  }
+  ::selection {
+    background-color: #43af99;
+  }
+  .container {
+    position:absolute;
+    background-color: black;
+    color:white;
+    margin-bottom:100%;
+    z-index:100;
+  }
+  .nav {
+    position: fixed;
+    z-index: 100;
+    bottom: 1em;
+    padding: 1em 5em 0 5em;
+    width: 100%;
+    display: none;
+    margin: auto;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav li {
+    flex: 1;
+    display: inline-block;
+    list-style: none;
+    margin: .5em;
+  }
+  .nav a {
+    display: block;
+    padding: .5em 1em;
+    color: #fff;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,.6);
+    text-align: center;
+    text-decoration:none;
+    font-family: "Raleway";
+  }
+  .nav li:hover {
+   background-color:rgba(67, 175, 153, 0.6);
+   border-radius:3px;
+  }
+
+  .acto {
+    position: relative;
+    padding: 8% 0;
+    overflow: hidden;
+  }
+  .acto__contenedor {
+    max-width: 1200px;
+    margin: 200px;
+    color: white;
+  }
+
+  .acto__bg {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+ 
+
+  #acto-1 .acto__bg {
+    background-image: url('/Documents/Project\ Heartcode/slide4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }  
+  #acto-2 .acto__bg {
+    background-image: url('/Documents/Project\ Heartcode/riddlemethis.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  #acto-3 .acto__bg {
+    background-image: url('/Documents/Project\ Heartcode/slide3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #acto-4 .acto__bg {
+    background-image: url('/Documents/Project\ Heartcode/silhouette_revised.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  @media screen and (min-width: 45em) {
+    .nav {
+      display: flex;
+    }
+    /* horizontal scroll styles */
+    html, body {
+      height: 100%;
+    }
+    .actos {
+      white-space: nowrap;
+      height: 100%;
+    }
+    .acto {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal;
+      margin-right:-.3em;
+    }
+    .acto__contentedor {
+      height: 100%;
+    }
+    .actos {
+        position: absolute;
+        overflow-x: auto;
+        overflow-y: hidden;
+        perspective: 300px;
+        scroll-behavior: smooth;
+        width: 100%;
+    }
+    .acto__texto {
+      margin-bottom: 30px;
+    }
+  }
+  .overlay { 
+    position: absolute; top: 0; right: 0;
+    border-radius: 200px;
+    margin-top: -15rem;
+    margin-right: -10rem;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    animation: pulse 3s infinite ease-in-out alternate;
+  } 
+  @keyframes pulse {
+    from { transform: scale(0.8); }
+    to { transform: scale(0.76); }
+  }
+  img.center {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 20%;
+        right: 80%;
+        margin: auto;
+        border: solid black 1.5px;
+    }
+  .popup-box {
+  position: absolute;
+  top: 15%;
+  right: 21.5%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0,0,0,.9);
+  color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar {
+    font-family: "Raleway";
+    font-weight: lighter;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body class="margin-z">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent flex-row">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold mx-3" href="landing page schizo.html">education</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav position-absolute end-0 mx-4">
+          <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              helplines
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="https://ccs.org.sg/nch/">national care hotline</a></li>
+              <li><a class="dropdown-item" href="https://www.imh.com.sg/Pages/Contact-Us.aspx">institute of mental health</a></li>
+              <li><a class="dropdown-item" href="https://www.sos.org.sg/contact-us">samaritans of singapore</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" aria-current="Story of recovery" href="try.html">story of recovery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="frequently asked questions" href="faq.html">faq</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="actos">
+        <section class="acto" id="acto-1">
+            <div class="acto__bg"></div>
+                <div class="acto__contenedor">
+                    <div class="acto__texto">
+                        <h1 id="acto-1-Titulo">Do Patients with Schizophrenia Ever Show Periods of Recovery?</h1>
+                        <p>Published in 2005, psychologist Martin Harrow of the University of Illinois College of Medicine and his colleagues followed schizophreinic patients over 15 years. Results show Schizophrenia is not beyond cure.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="acto" id="acto-2">
+            <div class="acto__bg"></div>
+                <div class="acto__contenedor">
+                    <div class="acto__texto">
+                        <h1>Struggles of Schizophrenia</h1>
+                        <p>Most schizophreinic patients are believed to be unable to function in their day to day lives, so as to live independently and provide for themselves.</p>
+                    </div>
+                </div>
+        </section>
+      
+          <section class="acto" id="acto-3">
+            <div class="acto__bg"></div>
+            <div class="acto__contenedor">
+              <div class="acto__texto">
+                <h1>Proof of recovery</h1>
+                <p>Cumulatively, over the 15-year period slightly over 40% of patients with schizophrenia showed 1 or more periods of recovery. And 30% are holding full time positions. Evidently, schizophrenic patients are able to live normal lives.</p>
+                <div id="lay">
+                <button class="overlay" id="table" type="button" onclick="big()" ><img src="/Documents/Project Heartcode/tabler.png"></button>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <section class="acto" id="acto-4">
+            <div class="acto__bg"></div>
+                <div class="acto__contenedor">
+                    <div class="acto__texto">
+                        <h1>Bottom line</h1>
+                        <p>Schizophrenia is treatable, and many people with this condition go on to live balanced, fulfilling lives. Learning specific coping skills and strategies can help you manage symptoms. It is prudent for patients to seek medical attention and get on medication.</p>
+                    </div>
+                </div>
+        </section>
+</div>
+    <nav>
+        <ul class="nav">
+            <li><a href="#acto-1">abstract</a></li>
+            <li><a href="#acto-2">hypothesis</a></li>
+            <li><a href="#acto-3">evidence</a></li>
+            <li><a href="#acto-4">conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+function big() {
+  const img = document.createElement("img");
+  img.setAttribute("src","/Documents/Project Heartcode/tabler.png");
+  img.setAttribute ("height","416px");
+  img.setAttribute("width","739px");
+  img.setAttribute("class","center");
+  img.setAttribute("display","block");
+  img.style.display = "block";
+
+  const parent = document.getElementById("lay");
+  const child = document.getElementById("table");
+  parent.appendChild(img, child);
+
+  const btnClose = document.createElement("span");
+  btnClose.innerHTML = "x"
+  btnClose.setAttribute("class","popup-box");
+  parent.appendChild(btnClose,child);
+  btnClose.onclick= function() {close()};
+  function close() {
+  img.style.display = "none";
+  btnClose.style.display = "none";
+  }
+}
+
+</script>
+
+</body>
+</html>
